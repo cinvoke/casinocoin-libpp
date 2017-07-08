@@ -1,6 +1,6 @@
-# This is an demonstration cmake build file for ripple-libpp
+# This is an demonstration cmake build file for casinocoin-libpp
 #
-# cmake support in ripple-libpp. Currently supports:
+# cmake support in casinocoin-libpp. Currently supports:
 #
 #  * debug/release
 #  * sanitizer builds
@@ -47,7 +47,7 @@
 
 cmake_minimum_required(VERSION 3.1.0)
 
-project(ripple-libpp)
+project(casinocoin-libpp)
 
 ############################################################
 

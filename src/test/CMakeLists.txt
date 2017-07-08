@@ -1,7 +1,7 @@
-# cmake file for ripplelibppdemo
+# cmake file for casinocoinlibppdemo
 
 list(APPEND CMAKE_MODULE_PATH
-  "${CMAKE_CURRENT_SOURCE_DIR}/../../extras/rippled/Builds/CMake")
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../extras/casinocoind/Builds/CMake")
 include(CMakeFuncs)
 
 set(openssl_min 1.0.2)
@@ -25,9 +25,9 @@ check_gcc4_abi()
 
 include_directories(
   SYSTEM
-  ../../extras/rippled/src
-  ../../extras/rippled/src/beast/include
-  ../../extras/rippled/src/beast/extras
+  ../../extras/casinocoind/src
+  ../../extras/casinocoind/src/beast/include
+  ../../extras/casinocoind/src/beast/extras
   ../../src/include)
 
 special_build_flags()
@@ -47,7 +47,7 @@ setup_build_boilerplate()
 
 ############################################################
 
-set(demo_src ripple-libpp_demo.cpp)
+set(demo_src casinocoin-libpp_demo.cpp)
 
 ############################################################
 
@@ -55,8 +55,8 @@ if (WIN32 OR is_xcode)
   file(GLOB_RECURSE all_headers
     src/*.hpp
     src/*.h
-    ../../extras/rippled/src/*.hpp
-    ../../extras/rippled/src/*.h
+    ../../extras/casinocoind/src/*.hpp
+    ../../extras/casinocoind/src/*.h
     ../../extras/*/CMakeFuncs.cmake)
   list(APPEND demo_src "${all_headers}")
 
@@ -78,22 +78,22 @@ endif()
 
 if (WIN32 OR is_xcode)
   group_sources(src)
-  group_sources(extras/rippled/src)
-  group_sources(extras/rippled/Builds)
+  group_sources(extras/casinocoind/src)
+  group_sources(extras/casinocoind/Builds)
 endif()
 
 ############################################################
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
-add_executable(ripplelibppdemo
+add_executable(casinocoinlibppdemo
     ${demo_src}
-    $<TARGET_OBJECTS:ripplelibpp>)
+    $<TARGET_OBJECTS:casinocoinlibpp>)
 
-set_startup_project(ripplelibppdemo)
+set_startup_project(casinocoinlibppdemo)
 
-target_link_libraries(ripplelibppdemo
+target_link_libraries(casinocoinlibppdemo
     ${OPENSSL_LIBRARIES}
     ${SANITIZER_LIBRARIES})
 
-link_common_libraries(ripplelibppdemo)
+link_common_libraries(casinocoinlibppdemo)

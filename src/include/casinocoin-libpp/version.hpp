@@ -17,17 +17,17 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_LIBPP_VERSION_HPP
-#define RIPPLE_LIBPP_VERSION_HPP
+#ifndef CASINOCOIN_LIBPP_VERSION_HPP
+#define CASINOCOIN_LIBPP_VERSION_HPP
 
 // follows http://semver.org
 
-//  RIPPLE_LIBPP_VERSION % 100 is the patch level
-//  RIPPLE_LIBPP_VERSION / 100 % 1000 is the minor version
-//  RIPPLE_LIBPP_VERSION / 100000 is the major version
+//  CASINOCOIN_LIBPP_VERSION % 100 is the patch level
+//  CASINOCOIN_LIBPP_VERSION / 100 % 1000 is the minor version
+//  CASINOCOIN_LIBPP_VERSION / 100000 is the major version
 //
-#define RIPPLE_LIBPP_VERSION 100000
+#define CASINOCOIN_LIBPP_VERSION 100000
 
-#define RIPPLE_LIBPP_VERSION_STRING "1.0.0-b5"
+#define CASINOCOIN_LIBPP_VERSION_STRING "1.0.0-b1"
 
 #endif

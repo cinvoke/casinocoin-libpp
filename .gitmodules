@@ -1,4 +1,4 @@
-[submodule "extras/rippled"]
-	path = extras/rippled
-	url = https://github.com/ripple/rippled.git
+[submodule "extras/casinocoind"]
+	path = extras/casinocoind
+	url = https://github.com/casinocoin/casinocoind.git
 	branch = develop
